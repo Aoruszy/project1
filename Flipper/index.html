@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Симуляция подбрасывания монеты</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .coin {
+      font-size: 2em;
+      margin: 20px;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e0e0e0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="coin" id="result">?</div>
+  <button onclick="flipCoin()">Подбросить монету</button>
+
+  <script>
+    function flipCoin() {
+      const result = Math.random() < 0.5 ? "Орел" : "Решка";
+      document.getElementById("result").textContent = result;
+    }
+  </script>
+
+</body>
+</html>
